@@ -20,7 +20,7 @@
 {
   // case 2
   let place = 'На виставці сучасного мистецтва у Нью-Йорку';
-  let dateTime = new Date(2023, 12, 6, 15, 00, 0);
+  let dateTime = new Date(2023, 12, 6, 15, 0, 0);
   let user1Name = 'Майк';
   let user2Name = 'Амелією';
   let user3Name = 'Саймон';
