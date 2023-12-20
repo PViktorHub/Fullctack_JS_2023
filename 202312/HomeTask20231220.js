@@ -127,3 +127,32 @@ console.log(`Speed: ${speed} km/h`);
     
     printTriangles(5);
 }
+
+//Optimization1
+{
+    const width = Math.floor(Math.random() * 9 + 2);
+    const height = Math.floor(Math.random() * 9 + 2);
+    const symbol = '*';
+    const EOL = '\n';
+    let image = '';
+    const generatedString = symbol.repeat(width);
+    for(let i = 0; i < height; i++){
+        image += generatedString + EOL;
+    }
+    console.log(image);
+
+}
+
+//Optimization2
+{
+    const width = Math.floor(Math.random() * 9 + 2);
+    const height = Math.floor(Math.random() * 9 + 2);
+    const symbol = '*';
+    const EOL = '\n';
+    let image = '';
+    const generatedString = symbol.repeat(width);
+    const strWithNewLineSign = generatedString + EOL;
+    const res = strWithNewLineSign.repeat(height);
+    console.log(res);
+
+}
