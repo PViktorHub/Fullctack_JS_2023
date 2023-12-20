@@ -67,10 +67,10 @@ console.log(`Speed: ${speed} km/h`);
                 color = "Green";
                 break;
             case 5:
-                color = "Blue";
+                color = "Cyan";
                 break;
             case 6:
-                color = "Indigo";
+                color = "Blue";
                 break;
             case 7:
                 color = "Violet";
