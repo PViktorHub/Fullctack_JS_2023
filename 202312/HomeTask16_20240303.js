@@ -80,11 +80,22 @@ console.log('Площа:', rectangle.calculateArea());
 
 //Task3
 class BankAccount {
-    #balance; 
+    #balance;
+    #owner;
+    #bankAccountNumber;
 
-    constructor(owner, initialBalance) {
-        this.owner = owner;
-        this.#balance = initialBalance; 
+    constructor(owner, bankAccountNumber, initialBalance) {
+        this.#owner = owner;
+        this.#balance = initialBalance;
+        this.#bankAccountNumber = bankAccountNumber;
+    }
+    
+    get owner(){
+        return this.#owner;
+    }
+
+    get bankAccountNumber(){
+        return this.#bankAccountNumber;
     }
 
     deposit(amount) {
@@ -105,16 +116,94 @@ class BankAccount {
         }
     }
 
+    transferTo(toAccount, amount){
+
+        if(toAccount === undefined || toAccount === null){
+            throw new Error("toAccount cant be undefined");
+        }
+
+        if(this.balance < amount){
+            throw new Error("Insufficient funds in the account");
+        }
+        this.#balance -= amount;
+        toAccount.#balance += amount;
+    }
+
+
     get balance() {
         return this.#balance;
     }
 }
 
-const account = new BankAccount('Іван Петрович', 1000);
 
-account.deposit(500);
-account.withdraw(200);
-account.deposit(1000);
-account.withdraw(1500);
+
+
+
+
 
 //Task4
+
+class Bank{
+    #accounts;
+    
+    constructor(){
+        this.#accounts = [];
+    }
+    addAccount(account){
+        if(this.getAccount(account.bankAccountNumber) != undefined){
+            throw new Error("Account already exists");
+        }
+
+        this.#accounts.push(account);
+        console.log(this.#accounts);
+    }
+
+    removeAccount(account){
+
+        const acc = this.getAccount(account.bankAccountNumber);
+        if(acc === undefined){
+            throw new Error("Account has not been found");
+        }
+
+        this.#accounts.splice(this.#accounts.findIndex(acc));
+    }
+
+    getAccount(bankAccountNumber){
+        return this.#accounts.find(x => x.bankAccountNumber === bankAccountNumber);
+    }
+
+
+    transfer(fromAccountNumber, toAccountNumber, amount){
+        const fromAcc = this.getAccount(fromAccountNumber);
+        const toAcc = this.getAccount(toAccountNumber);
+
+        if(fromAcc === undefined){
+            throw new Error("From account has not been found");
+        }
+
+        if(toAcc === undefined){
+            throw new Error("To account has not been found");
+        }
+
+        fromAcc.transferTo(toAcc, amount);
+    }
+}
+
+
+const accountFrom = new BankAccount('Іван Петрович', 4565328745653287, 1000);
+const accountTo = new BankAccount('Петро Іванович', 4565348745653487, 2000);
+const bank = new Bank();
+bank.addAccount(accountFrom);
+bank.addAccount(accountTo);
+
+const amount = 750;
+console.log(`${accountFrom.owner} balance: ${accountFrom.balance}`);
+console.log(`${accountTo.owner} balance: ${accountTo.balance}`);
+console.log(`Transfer ${amount} from ${accountFrom} to ${accountTo}`);
+
+bank.transfer(accountFrom.bankAccountNumber, accountTo.bankAccountNumber, amount);
+
+console.log(`${accountFrom.owner} balance: ${accountFrom.balance}`);
+console.log(`${accountTo.owner} balance: ${accountTo.balance}`);
+
+
