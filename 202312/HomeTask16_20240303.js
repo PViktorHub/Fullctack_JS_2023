@@ -83,11 +83,13 @@ class BankAccount {
     #balance;
     #owner;
     #bankAccountNumber;
+    #cvvCode;
 
-    constructor(owner, bankAccountNumber, initialBalance) {
+    constructor(owner, bankAccountNumber, initialBalance, cvvCode) {
         this.#owner = owner;
         this.#balance = initialBalance;
         this.#bankAccountNumber = bankAccountNumber;
+        this.#cvvCode = cvvCode;
     }
     
     get owner(){
@@ -116,10 +118,14 @@ class BankAccount {
         }
     }
 
-    transferTo(toAccount, amount){
+    transferTo(toAccount, amount, cvv){
 
         if(toAccount === undefined || toAccount === null){
             throw new Error("toAccount cant be undefined");
+        }
+
+        if(this.#cvvCode !== cvv){
+            throw new Error("CVV doesn't match");
         }
 
         if(this.balance < amount){
@@ -173,7 +179,7 @@ class Bank{
     }
 
 
-    transfer(fromAccountNumber, toAccountNumber, amount){
+    transfer(fromAccountNumber, toAccountNumber, amount, cvv){
         const fromAcc = this.getAccount(fromAccountNumber);
         const toAcc = this.getAccount(toAccountNumber);
 
@@ -185,13 +191,13 @@ class Bank{
             throw new Error("To account has not been found");
         }
 
-        fromAcc.transferTo(toAcc, amount);
+        fromAcc.transferTo(toAcc, amount, cvv);
     }
 }
 
 
-const accountFrom = new BankAccount('Іван Петрович', 4565328745653287, 1000);
-const accountTo = new BankAccount('Петро Іванович', 4565348745653487, 2000);
+const accountFrom = new BankAccount('Іван Петрович', 4565328745653287, 1000, 111);
+const accountTo = new BankAccount('Петро Іванович', 4565348745653487, 2000, 222);
 const bank = new Bank();
 bank.addAccount(accountFrom);
 bank.addAccount(accountTo);
@@ -201,7 +207,7 @@ console.log(`${accountFrom.owner} balance: ${accountFrom.balance}`);
 console.log(`${accountTo.owner} balance: ${accountTo.balance}`);
 console.log(`Transfer ${amount} from ${accountFrom} to ${accountTo}`);
 
-bank.transfer(accountFrom.bankAccountNumber, accountTo.bankAccountNumber, amount);
+bank.transfer(accountFrom.bankAccountNumber, accountTo.bankAccountNumber, amount, 111);
 
 console.log(`${accountFrom.owner} balance: ${accountFrom.balance}`);
 console.log(`${accountTo.owner} balance: ${accountTo.balance}`);
