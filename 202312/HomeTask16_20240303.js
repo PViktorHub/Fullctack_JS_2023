@@ -205,7 +205,7 @@ bank.addAccount(accountTo);
 const amount = 750;
 console.log(`${accountFrom.owner} balance: ${accountFrom.balance}`);
 console.log(`${accountTo.owner} balance: ${accountTo.balance}`);
-console.log(`Transfer ${amount} from ${accountFrom} to ${accountTo}`);
+console.log(`Transfer ${amount} from ${accountFrom.owner} to ${accountTo.owner}`);
 
 bank.transfer(accountFrom.bankAccountNumber, accountTo.bankAccountNumber, amount, 111);
 
