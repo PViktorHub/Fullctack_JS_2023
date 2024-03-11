@@ -1,3 +1,4 @@
+//Task1
 {
     class GameDeveloper {
         constructor(name, skillLevel, experience) {
@@ -66,6 +67,9 @@
     });
 }
 
+
+
+//Task2
 {
     class Developer {
         constructor(name, skillLevel, salary) {
