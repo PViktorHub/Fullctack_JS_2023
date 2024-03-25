@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблиця</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">№</th>
+      <th colspan="2">Перший період</th>
+      <th colspan="2">Другий період</th>
+    </tr>
+    <tr>
+      <th>Зима</th>
+      <th>Весна</th>
+      <th>Літо</th>
+      <th>Осінь</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td rowspan="2">-5°C</td>
+      <td>15°C</td>
+      <td>25°C</td>
+      <td rowspan="2">10°C</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>20°C</td>
+      <td>30°C</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0°C</td>
+      <td>10°C</td>
+      <td rowspan="2">20°C</td>
+      <td rowspan="2">5°C</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5°C</td>
+      <td>15°C</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
