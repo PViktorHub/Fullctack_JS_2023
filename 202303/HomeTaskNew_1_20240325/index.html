@@ -3,31 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main-styles.css">
     <title>Моя подорож</title>
 </head>
 <body>
 
 <header>
-    <h1>Моя подорож</h1>
+    <div class="container">
+        <h1>Моя подорож</h1>
+    </div>
 </header>
 
 <nav>
-    <ul>
-        <li><a href="#about">Про нас</a></li>
-        <li><a href="#places">Місця</a></li>
-        <li><a href="#gallery">Галерея</a></li>
-        <li><a href="#contact">Контакти</a></li>
-    </ul>
+    <div class="container">
+        <ul class="menu">
+            <li><a href="#about">Про нас</a></li>
+            <li><a href="#places">Місця</a></li>
+            <li><a href="#gallery">Галерея</a></li>
+            <li><a href="#contact">Контакти</a></li>
+        </ul>
+    </div>
 </nav>
 
 <section id="about">
-    <h2>Про нас</h2>
-    <p>Ми - група пригодників, які подорожують по всьому світу, досліджуючи нові місця та культури.</p>
+    <div class="container">
+        <h2>Про нас</h2>
+    </div>
+    <p>Ми - група пригодників, які подорожують по всьому світу, досліджуючи нові місця та культури. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, 
+        consequuntur voluptatem veniam ipsum similique nemo beatae dolorum excepturi vero, eligendi distinctio magni possimus! Excepturi aliquid tempore doloremque porro eius dolorem. 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quis voluptas facere earum doloremque obcaecati amet eius ipsam officia maxime, illo commodi quae cum inventore, 
+        placeat quia sint corporis nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor nesciunt fugit ut voluptate, vel reprehenderit, 
+        tempora, officia obcaecati exercitationem doloribus repellat? Iste consequuntur voluptatem facere nesciunt libero cupiditate veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, laboriosam! Cumque aliquam officia nam ex atque tenetur porro similique,
+         iusto, ducimus fugit beatae. Optio quam ipsum facilis eveniet quas laborum!</p>
 </section>
 
 <section id="places">
-    <h2>Місця</h2>
-    <ol>
+    <div class="container">
+        <h2>Місця</h2>
+    </div>
+
+    <ol class="menu">
         <li><a href="#paris_gallery">Париж, Франція</a></li>
         <li><a href="#machu_picchu_gallery">Мачу-Пікчу, Перу</a></li>
         <li><a href="#paris_gallery">Сідней, Австралія</a></li>
@@ -35,40 +53,76 @@
 </section>
 
 <section id="gallery">
-    <h2>Галерея</h2>
+    <div class="container">
+        <h2>Галерея</h2>
+    </div>
+
     <section id="paris_gallery">
-        <h3>Париж</h3>
-        <img src="pictures/paris.jpg" alt="Париж">
-        <br>
+        <div class="container">
+            <h3>Париж</h3>
+        </div>
+        <div class="container">
+            <img src="pictures/paris.jpg" alt="Париж">
+            <img src="pictures/paris.jpg" alt="Париж">
+            <img src="pictures/paris.jpg" alt="Париж">
+            <img src="pictures/paris.jpg" alt="Париж">
+            <img src="pictures/paris.jpg" alt="Париж">
+            <img src="pictures/paris.jpg" alt="Париж">
+            <img src="pictures/paris.jpg" alt="Париж">
+        </div>
+
     </section>
 
     <section id="machu_picchu_gallery">
-        <h3>Мачу-Пікчу</h3>
-        <img src="pictures/machu_picchu.jpg" alt="Мачу-Пікчу">
+        <div class="container">
+            <h3>Мачу-Пікчу</h3>
+        </div>
+
+        <div class="container">
+            <img src="pictures/machu_picchu.jpg" alt="Мачу-Пікчу">
+            <img src="pictures/machu_picchu.jpg" alt="Мачу-Пікчу">
+            <img src="pictures/machu_picchu.jpg" alt="Мачу-Пікчу">
+            <img src="pictures/machu_picchu.jpg" alt="Мачу-Пікчу">
+            <img src="pictures/machu_picchu.jpg" alt="Мачу-Пікчу">
+            <img src="pictures/machu_picchu.jpg" alt="Мачу-Пікчу">
         <br>
     </section>
        
     <section id="sydney_gallery">
-        <h3>Сідней</h3>
-        <img src="pictures/sydney.jpg" alt="Сідней">
+        <div class="container">
+            <h3>Сідней</h3>
+        </div>
+        <div class="container">
+            <img src="pictures/sydney.jpg" alt="Сідней">
+            <img src="pictures/sydney.jpg" alt="Сідней">
+            <img src="pictures/sydney.jpg" alt="Сідней">
+            <img src="pictures/sydney.jpg" alt="Сідней">
+            <img src="pictures/sydney.jpg" alt="Сідней">
+            <img src="pictures/sydney.jpg" alt="Сідней">
+            <img src="pictures/sydney.jpg" alt="Сідней">
+        </div>
+        
         <br>
     </section>
     
 </section>
 
 <section id="contact">
-    <h2>Контакти</h2>
-    <ul>
+    <div class="container">
+        <h2>Контакти</h2>
+    </div>
+
+    <ul class="inline-menu">
         <li>Вася Пупкін</li>
-        <li>Телефон: +380123456789</li>
-        <li>Email: vasiapupkin@example.com</li>
-        <li>Місто: Киев</li>
+            <li>Телефон: +380123456789</li>
+            <li>Email: vasiapupkin@example.com</li>
+            <li>Місто: Киев</li>
     </ul>
     
 </section>
 
-<footer>
-    <p>© 2024 Моя подорож</p>
+<footer class="container">
+    <p>2024 Моя подорож</p>
 </footer>
 
 </body>
