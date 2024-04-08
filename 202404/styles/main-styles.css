@@ -1,0 +1,139 @@
+html{
+    font-size: 18px;
+}
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #122447;
+}
+
+.header-container{
+    margin: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo-container {
+    text-align: left;
+    order: 1; 
+}
+
+#main-menu {
+    order: 2; 
+}
+
+#sign-in-menu {
+    order: 3; 
+}
+
+.logo-container{
+    display: flex;
+    height: 100px;
+}
+
+.logo-text{
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    width: 230px;
+    align-items: left;
+    margin: 10px 20px 0px 10px;
+    text-wrap: nowrap;
+}
+
+.logo-text div{
+    color: #3F87F4;
+}
+
+.logo-text >div:last-child{
+    color: #FFFF;
+}
+
+.main-menu{
+    background: #122447;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-in-menu{
+    background: #122447;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-menu li{
+    list-style-type: none;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 2px #333;
+}
+
+.sign-in-menu li{
+    list-style-type: none;
+    font-size: 1rem;
+    text-shadow: 2px 2px 2px #333;
+}
+
+.main-menu li:hover, .sign-in-menu li:hover{
+    background: #19314A;
+}
+
+.main-menu a, .sign-in-menu a{
+    color: #80A7F4;
+    text-decoration: none;
+    padding: 0px 10px;
+    text-wrap: nowrap;
+}
+
+@media all and (max-width: 1000px) {
+    .header-container{
+        display: block;
+        text-align: center;
+    }
+
+    #logo-container {
+        justify-content: center;
+        order: 1; 
+    }
+
+    #main-menu {
+        order: 3; 
+        margin: 10px 0px 10px 0px;
+    }
+    
+    #sign-in-menu {
+        order: 2; 
+    }
+}
+
+@media all and (max-width: 520px) {
+
+    .main-menu {
+        display: block;
+        text-align: center;
+    }
+    
+    .main-menu li{
+        margin: 10px 0px 0px 0px;
+    }
+    
+}
+
+footer{
+    text-align: center;
+    color: #80A7F4;
+}
+
+
+
+
+
+
