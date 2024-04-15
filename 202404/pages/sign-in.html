@@ -5,21 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../styles/main-styles.css">
         <link rel="stylesheet" href="styles/sign-in.css">
-
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
         <title>Task Manager</title>
     </head>
     <body>
         <div class="main-content-container">
             <form>
-
+                <fieldset>
+                    <legend>Sign in</legend>
+                    <div class="form-pair">
+                        <span class="material-symbols-outlined">Login</span>
+                        <input type="text" name="user_name" placeholder="Your login" required/>
+                    </div>
+                    <div class="form-pair">
+                        <span class="material-symbols-outlined">Password</span>
+                        <input type="password" name="user_pass" placeholder="Your password" required/>
+                    </div>
+                </fieldset>
+                <button type="button" class="form-button">Log in</button>
             </form>
         </div>
-
+        
         <footer>
             <p>@2024 Task manager development company</p>
         </footer>
-
     </body>
-
-    
 </html>

@@ -1,117 +1,56 @@
-html, body{
-    font-size: 18px;
-    height: 100%;
-}
+form {
+    user-select: none;
+    width: 400px;
+    height: 500px;
+    padding: 30px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    border-radius: 0.375rem;
+    text-wrap: nowrap;
+  }
 
-*{
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+  form button{
+    width: 100%;
+    margin-top: 30px;
+  }
 
-body{
-    background: #122447;
+  fieldset {
+    border: 3px groove;
+    padding: 15px;
+    margin: 5px 0;
+    height: 80%;
+  }
+
+  .form-pair{
+    padding-top: 25px;
+  }
+
+  div + .form-pair:first-child{
+    padding-top: 45px;
+  }
+
+  .form-pair label{
+    width:100px;
+    text-align: left;
+  }
+
+  .form-pair input{
+    padding: 5px 10px;
+    text-align: left;
+  }
+
+  legend {
+    text-align: right;
+    text-transform: lowercase;
+    font-variant: small-caps;
+  }
+
+  label {
+    display: inline-block;
+    margin-bottom: 2px;
+  }
+
+  .main-content-container{
     display: flex;
-    flex-wrap: wrap;
-}
-
-h2{
-    padding-top: 20px;
-    text-align: center;
-    color: #80A7F4;
-    width: 100%;
-}
-
-.table-container{
-    width: 100%;
-    min-height: calc(100% - 40px);
-    padding: 20px 20px 0px 20px;
-}
-
-.main-table{
-    color: #80A7F4;
-    width: 100%;
-    border-collapse: separate;
-    border-collapse: collapse;
-}
-
-.main-table tr{
-    width: 100%;
-    height: 30px;
-}
-
-.main-table tr >*{
-    padding: 0px 10px;
-}
-
-.main-table thead{
-    height: 40px;
-}
-
-.main-table,
-.main-table th,
-.main-table td{
-    border: 1px solid #80A7F4;
-}
-
-.main-table tbody{
-    background: #122447;
-}
-
-.main-table tbody tr th:first-child{
-    background: #1B2D50;
-    color: #A0C7FF;
-}
-
-.main-table tbody tr th:nth-child(2){
-    background: #1B2D50;
-    color: #00C7FF;
-}
-
-.main-table tbody tr:nth-child(2n) th{
-    background: #273857;
-    color:#80B7FF;
-}
-
-.main-table tbody tr:hover th{
-    background: #425477;
-}
-
-.context-menu {
-    display: none;
-    font-size: 0.75rem;
-    position: absolute;
-    background: #3A4B70;
-    color: #80A7F4;
-    border: 1px solid #80A7F4;
-    padding: 0;
-}
-
-.context-menu ul{
-    list-style-type: none;
-}
-
-.context-menu li{
-    padding: 5px 15px;
-    min-width: 150px;
-}
-
-.context-menu li:hover{
-    background: #526487;
-}
-  
-.main-table tbody tr:hover .context-menu {
-    display: block;
-}
-
-footer{
-    padding: 30px 0px;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    height: 40px;
-    color: #80A7F4;
-    width: 100%;
-}
+    justify-content: center;
+  }
