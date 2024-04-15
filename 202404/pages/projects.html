@@ -8,7 +8,7 @@
         <title>Task Manager</title>
     </head>
     <body>
-        <h2 class="full-width">Projects</h1>
+        <h2 class="full-width">Projects</h2>
         <div class="main-content-container">
             <table class ="main-table">
                 <thead>
@@ -205,23 +205,22 @@
         <footer>
             <p>@2024 Task manager development company</p>
         </footer>
-
+        <script>
+            $(document).ready(function() {
+              $('.main-table tbody tr').on('contextmenu', function(e) {
+                e.preventDefault();
+                $('.table-context-menu').hide();
+                $('.table-context-menu').show().css({
+                  top: e.pageY + 'px',
+                  left: e.pageX + 'px'
+                });
+              });
+              
+              $(document).on('click', function() {
+                $('.table-context-menu').hide();
+              });
+            });
+        </script>
     </body>
 </html>
 
-<script>
-    $(document).ready(function() {
-      $('.main-table tbody tr').on('contextmenu', function(e) {
-        e.preventDefault();
-        $('.table-context-menu').hide();
-        $('.table-context-menu').show().css({
-          top: e.pageY + 'px',
-          left: e.pageX + 'px'
-        });
-      });
-      
-      $(document).on('click', function() {
-        $('.table-context-menu').hide();
-      });
-    });
-</script>
