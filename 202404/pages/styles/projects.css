@@ -1,0 +1,104 @@
+html{
+    font-size: 18px;
+    height: 100%;
+}
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #122447;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+h2{
+    padding-top: 20px;
+    text-align: center;
+    color: #80A7F4;
+    width: 100%;
+}
+
+.table-container{
+    width: 100%;
+    min-height: calc(100% - 40px);
+    padding: 20px 20px 0px 20px;
+}
+
+.main-table{
+    color: #80A7F4;
+    width: 100%;
+    border-collapse: separate;
+    border-collapse: collapse;
+}
+
+.main-table,
+.main-table th,
+.main-table td{
+    border: 1px solid #80A7F4;
+}
+
+.main-table tbody{
+    background: #122447;
+}
+
+.main-table tbody tr:hover{
+    background: #425477;
+}
+
+
+.main-table thead{
+    height: 40px;
+}
+
+.main-table tr{
+    width: 100%;
+    height: 30px;
+}
+
+.main-table tr >*{
+    padding: 0px 10px;
+}
+
+.context-menu {
+    display: none;
+    font-size: 0.75rem;
+    position: absolute;
+    background: #425477;
+    color: #80A7F4;
+    border: 1px solid #80A7F4;
+    padding: 0;
+}
+
+.context-menu ul{
+    list-style-type: none;
+}
+
+.context-menu li{
+    padding: 5px 15px;
+    min-width: 150px;
+}
+
+.context-menu li:hover{
+    background: #526487;
+}
+  
+.main-table tbody tr:hover .context-menu {
+    display: block;
+}
+
+footer{
+    padding: 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: #80A7F4;
+    width: 100%;
+}
