@@ -1,0 +1,138 @@
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 10px;
+    flex-wrap: nowrap;
+}
+
+.header-container img{
+    width: 95px;
+    height: 95px;
+}
+
+.logo-container{
+    display: flex;
+    order: 1; 
+}
+
+.logo-text{
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    align-items: left;
+    padding: 10px 20px 0px 10px;
+    text-wrap: nowrap;
+}
+
+.logo-text div{
+    color: #3F87F4;
+}
+
+.logo-text >div:last-child{
+    color: #FFFF;
+}
+
+.main-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+}
+
+.sign-in-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 3; 
+}
+
+.main-menu li{
+    list-style-type: none;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 2px #333;
+}
+
+.sign-in-menu li{
+    list-style-type: none;
+    font-size: 1rem;
+    text-shadow: 2px 2px 2px #333;
+}
+
+.main-menu li:hover, .sign-in-menu li:hover{
+    background: #19314A;
+}
+
+.main-menu a, .sign-in-menu a{
+    color: #80A7F4;
+    text-decoration: none;
+    padding: 0px 10px;
+    text-wrap: nowrap;
+}
+
+.sign-in-menu li:last-child{
+    display: none;
+}
+
+@media all and (max-width: 1050px) {
+    .header-container{
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .logo-container {
+        justify-content: center;
+        flex-basis: 100%;
+        order: 1; 
+    }
+
+    .main-menu {
+        flex-basis: 100%;
+        order: 3; 
+        padding-top: 25px;
+    }
+    
+    .sign-in-menu {
+        flex-basis: 100%;
+        padding-top: 25px;
+        order: 2; 
+    }
+}
+
+@media all and (max-width: 520px) {
+
+    .main-menu {
+        flex-wrap: wrap;
+    }
+    
+    .main-menu li{
+        padding-top: 10px;
+        flex-basis: 100%;
+    }
+}
+
+@media all and (max-width: 368px) {
+
+    .logo-container img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo-text{
+        font-size: 1rem;
+    }
+}
+
+div + .main-content-container{
+    order: 4; 
+}
+
+footer{
+    order: 5; 
+}
+
+
+
+
+
+

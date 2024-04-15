@@ -1,8 +1,3 @@
-html{
-    font-size: 18px;
-    height: 100%;
-}
-
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -11,140 +6,122 @@ html{
     padding: 0;
 }
 
-body{
+html, body{
+    font-size: 18px;
     background: #122447;
-    display: flex;
-    flex-wrap: wrap;
     height: 100%;
 }
 
-.header-container{
+body{
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 20px 10px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
-.header-container img{
-    width: 95px;
-    height: 95px;
-}
-
-.logo-container{
-    display: flex;
-    order: 1; 
-}
-
-.logo-text{
-    display: flex;
-    flex-direction: column;
-    font-size: 2rem;
-    align-items: left;
-    padding: 10px 20px 0px 10px;
-    text-wrap: nowrap;
-}
-
-.logo-text div{
-    color: #3F87F4;
-}
-
-.logo-text >div:last-child{
-    color: #FFFF;
-}
-
-.main-menu{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    order: 2;
-}
-
-.sign-in-menu{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    order: 3; 
-}
-
-.main-menu li{
-    list-style-type: none;
-    font-size: 1.5rem;
-    text-shadow: 2px 2px 2px #333;
-}
-
-.sign-in-menu li{
-    list-style-type: none;
-    font-size: 1rem;
-    text-shadow: 2px 2px 2px #333;
-}
-
-.main-menu li:hover, .sign-in-menu li:hover{
-    background: #19314A;
-}
-
-.main-menu a, .sign-in-menu a{
+h1, h2, h3{
+    text-align: center;
     color: #80A7F4;
-    text-decoration: none;
-    padding: 0px 10px;
-    text-wrap: nowrap;
-}
-
-@media all and (max-width: 1050px) {
-    .header-container{
-        text-align: center;
-        flex-wrap: wrap;
-    }
-
-    .logo-container {
-        justify-content: center;
-        flex-basis: 100%;
-        order: 1; 
-    }
-
-    .main-menu {
-        flex-basis: 100%;
-        order: 3; 
-        padding-top: 25px;
-    }
-    
-    .sign-in-menu {
-        flex-basis: 100%;
-        padding-top: 25px;
-        order: 2; 
-    }
-}
-
-@media all and (max-width: 520px) {
-
-    .main-menu {
-        flex-wrap: wrap;
-    }
-    
-    .main-menu li{
-        padding-top: 10px;
-        flex-basis: 100%;
-    }
-}
-
-@media all and (max-width: 368px) {
-
-    .logo-container img{
-        width: 50px;
-        height: 50px;
-    }
-
-    .logo-text{
-        font-size: 1rem;
-    }
-}
-
-.main-content{
-    display: flex;
-    min-height: calc(100% - 40px);
- 
     width: 100%;
-    order: 4; 
+}
+
+h1{
+    padding-top: 20px;
+    font-size: 2.25rem;
+}
+
+h2{
+    padding-top: 15px;
+    font-size: 1.75rem;
+}
+
+h3{
+    padding-top: 10px;
+    font-size: 1.5rem;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.main-content-container{
+    width: 100%;
+    min-height: calc(100% - 40px);
+    padding: 20px 20px 0px 20px;
+}
+
+.main-table{
+    color: #80A7F4;
+    width: 100%;
+    border-collapse: separate;
+    border-collapse: collapse;
+}
+
+.main-table tr{
+    width: 100%;
+    height: 30px;
+}
+
+.main-table tr >*{
+    padding: 0px 10px;
+}
+
+.main-table thead{
+    height: 40px;
+}
+
+.main-table,
+.main-table th,
+.main-table td{
+    border: 1px solid #80A7F4;
+}
+
+.main-table tbody{
+    background: #122447;
+}
+
+.main-table tbody tr th:first-child{
+    background: #1B2D50;
+    color: #A0C7FF;
+}
+
+.main-table tbody tr th:nth-child(2){
+    background: #1B2D50;
+    color: #00C7FF;
+}
+
+.main-table tbody tr:nth-child(2n) th{
+    background: #273857;
+    color:#80B7FF;
+}
+
+.main-table tbody tr:hover th{
+    background: #425477;
+}
+
+.table-context-menu {
+    display: none;
+    font-size: 0.75rem;
+    position: absolute;
+    background: #3A4B70;
+    color: #80A7F4;
+    border: 1px solid #80A7F4;
+    padding: 0;
+}
+
+.table-context-menu ul{
+    list-style-type: none;
+}
+
+.table-context-menu li{
+    padding: 5px 15px;
+    min-width: 150px;
+}
+
+.table-context-menu li:hover{
+    background: #526487;
+}
+  
+.main-table tbody tr:hover .table-context-menu {
+    display: block;
 }
 
 footer{
@@ -156,11 +133,4 @@ footer{
     padding: 30px 0px;
     height: 40px;
     width: 100%;
-    order: 5; 
 }
-
-
-
-
-
-

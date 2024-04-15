@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles/projects.css">
+        <link rel="stylesheet" href="../styles/main-styles.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <title>Task Manager</title>
     </head>
     <body>
-        <h2>Projects</h1>
-        <div class="table-container">
+        <h2 class="full-width">Projects</h1>
+        <div class="main-content-container">
             <table class ="main-table">
                 <thead>
                     <tr>
@@ -192,7 +192,7 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="context-menu">
+            <div class="table-context-menu">
                 <ul>
                   <li>Add Project</li>
                   <li>Edit Project</li>
@@ -202,7 +202,7 @@
            
         </div>    
         
-        <footer class="container">
+        <footer>
             <p>@2024 Task manager development company</p>
         </footer>
 
@@ -213,15 +213,15 @@
     $(document).ready(function() {
       $('.main-table tbody tr').on('contextmenu', function(e) {
         e.preventDefault();
-        $('.context-menu').hide();
-        $('.context-menu').show().css({
+        $('.table-context-menu').hide();
+        $('.table-context-menu').show().css({
           top: e.pageY + 'px',
           left: e.pageX + 'px'
         });
       });
       
       $(document).on('click', function() {
-        $('.context-menu').hide();
+        $('.table-context-menu').hide();
       });
     });
 </script>
