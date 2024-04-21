@@ -1,23 +1,26 @@
 *{
     box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: Arial, Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
-html, body{
+html{
+    font-family: Arial, Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
     font-size: 18px;
-    background: #122447;
-    height: 100%;
 }
+
 
 body{
+    margin: 0;
+    background: #122447;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100vh;
 }
 
-h1, h2, h3, form{
+h1,
+h2,
+h3,
+form{
     text-align: center;
     color: #80A7F4;
     width: 100%;
@@ -53,9 +56,8 @@ h3{
 }
 
 .main-content-container{
-    width: 100%;
-    min-height: calc(100% - 40px);
-    padding: 20px 20px 0px 20px;
+    padding: 0px 20px;
+    flex-grow: 1;
 }
 
 .main-table{

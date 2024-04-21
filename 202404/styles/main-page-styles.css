@@ -7,8 +7,8 @@
 }
 
 .header-container img{
-    width: 95px;
-    height: 95px;
+    max-width: 95px;
+    width: 100%;
 }
 
 .logo-container{
@@ -20,7 +20,7 @@
     display: flex;
     flex-direction: column;
     font-size: 2rem;
-    align-items: left;
+    text-align: left;
     padding: 10px 20px 0px 10px;
     text-wrap: nowrap;
 }
@@ -74,7 +74,7 @@
     display: none;
 }
 
-@media all and (max-width: 1050px) {
+@media all and (max-width: 1070px) {
     .header-container{
         text-align: center;
         flex-wrap: wrap;
@@ -89,17 +89,17 @@
     .main-menu {
         flex-basis: 100%;
         order: 3; 
-        padding-top: 25px;
+        padding: 25px 0px 0px 0px;
     }
     
     .sign-in-menu {
         flex-basis: 100%;
-        padding-top: 25px;
+        padding: 25px 0px 0px 0px;
         order: 2; 
     }
 }
 
-@media all and (max-width: 520px) {
+@media all and (max-width: 768px) {
 
     .main-menu {
         flex-wrap: wrap;
@@ -111,11 +111,10 @@
     }
 }
 
-@media all and (max-width: 368px) {
+@media all and (max-width: 576px) {
 
     .logo-container img{
-        width: 50px;
-        height: 50px;
+        max-width: 50px;
     }
 
     .logo-text{
