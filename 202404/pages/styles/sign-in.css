@@ -1,53 +1,7 @@
 form {
-    user-select: none;
-    width: 400px;
-    height: 500px;
-    padding: 30px;
-    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-    border-radius: 0.375rem;
-    text-wrap: nowrap;
-  }
-
-  form button{
-    width: 100%;
-    margin-top: 30px;
-  }
-
-  fieldset {
-    border: 3px groove;
-    padding: 15px;
-    margin: 5px 0;
-    height: 80%;
-  }
-
-  .form-pair{
-    padding-top: 25px;
-  }
-
-  div + .form-pair:first-child{
-    padding-top: 45px;
-  }
-
-  .form-pair label{
-    width:100px;
-    text-align: left;
-  }
-
-  .form-pair input{
-    padding: 5px 10px;
-    text-align: left;
-  }
-
-  legend {
-    text-align: right;
-    text-transform: lowercase;
-    font-variant: small-caps;
-  }
-
-  label {
-    display: inline-block;
-    margin-bottom: 2px;
-  }
+  width: 400px;
+  height: 500px;
+}
 
   .main-content-container{
     display: flex;
